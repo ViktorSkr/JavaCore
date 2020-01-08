@@ -1,21 +1,5 @@
 package com.viktorskr.javacore.chapter09.MyPack;
 
-class Balance {
-    String name;
-    double bal;
-
-    Balance(String n, double b) {
-        name = n;
-        bal = b;
-    }
-
-    void show() {
-        if (bal<0)
-            System.out.print("-->");
-        System.out.println(name + ": $" + bal);
-    }
-}
-
 
 public class AccountBalance {
     public static void main(String args[]) {
