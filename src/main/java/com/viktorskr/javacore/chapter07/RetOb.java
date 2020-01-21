@@ -1,8 +1,6 @@
 package com.viktorskr.javacore.chapter07;
 
-public class RetOb {
-
-    private static class Tets {
+ class Tets {
         int a;
 
         Tets(int i) {
@@ -14,6 +12,7 @@ public class RetOb {
         }
     }
 
+ class RetOb {
     public static void main(String args[]) {
         Tets ob1 = new Tets(2);
         Tets ob2;
