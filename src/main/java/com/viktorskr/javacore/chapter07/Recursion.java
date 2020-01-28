@@ -6,7 +6,7 @@ class Factorial{
 
             if (n==1) return 1;
             result=fact(n-1) * n;
-            System.out.println("n = " + n);
+            System.out.println("result = " + result);
             return result;
         }
 
