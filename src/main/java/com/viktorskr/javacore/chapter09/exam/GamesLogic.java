@@ -4,56 +4,104 @@ package com.viktorskr.javacore.chapter09.exam;
 
 class GamesLogic {
 
+    Field field = new Field();
+
+    char userstep;
+    char pcstep;
+
     boolean winner(char str){
-        if (str == Field.a[0][0] & str == Field.a[0][2] & str == Field.a[0][4])
+
+        if (str == field.a[0][0] & str == field.a[0][2] & str == field.a[0][4])
             return true;
         else;
-        if (str == Field.a[2][0] & str == Field.a[2][2] & str == Field.a[2][4])
+        if (str == field.a[2][0] & str == field.a[2][2] & str == field.a[2][4])
             return true;
         else;
-        if (str == Field.a[4][0] & str == Field.a[4][2] & str == Field.a[4][4])
+        if (str == field.a[4][0] & str == field.a[4][2] & str == field.a[4][4])
             return true;
         else;
-        if (str == Field.a[0][0] & str == Field.a[2][0] & str == Field.a[4][0])
+        if (str == field.a[0][0] & str == field.a[2][0] & str == field.a[4][0])
             return true;
         else;
-        if (str == Field.a[0][2] & str == Field.a[2][2] & str == Field.a[4][2])
+        if (str == field.a[0][2] & str == field.a[2][2] & str == field.a[4][2])
             return true;
         else;
-        if (str == Field.a[0][4] & str == Field.a[2][4] & str == Field.a[4][4])
+        if (str == field.a[0][4] & str == field.a[2][4] & str == field.a[4][4])
             return true;
         else;
-        if (str == Field.a[0][0] & str == Field.a[2][2] & str == Field.a[4][4])
+        if (str == field.a[0][0] & str == field.a[2][2] & str == field.a[4][4])
             return true;
         else;
-        if (str == Field.a[4][0] & str == Field.a[2][2] & str == Field.a[0][4])
+        if (str == field.a[4][0] & str == field.a[2][2] & str == field.a[0][4])
             return true;
         else;
         return false;
     }
 
+    char pcstep(){
 
-    boolean PCValidate(char vl) {
+        char pc;
 
-        boolean val = false;
+        pc = (char) (1 + Math.random() * 10);
 
-            for (char x[] : Field.a) {
-                for (char y : x) {
-                    if (y == vl) {
-                        val = true;
-                    }
+        for (char x[] : field.a) {
+            for (char y : x) {
+                if (y == pc) {
+                    return pc;
                 }
-            }return val;
+            }
+        }return 0;
+    }
+
+    char userstep(){
+
+        char step;
+
+        do {
+            System.out.println("Сделайте свой ход");
+            step = (char) System.in.read();
+        } while (step < '1' || step > '9');
+
+        return step;
     }
 
 
+    void start() {
 
-    char PCStep(){
-        char test[] = {'1','2','3','4','5','6','7','8','9'};
-        int PC;
-        PC = (int) (Math.random() * 9);
-        return test[PC];
+        boolean user;
+        boolean comp;
 
+        do {
+            boolean pcval;
+
+            field.print();
+
+            userstep = userstep();
+            field.push(userstep, 'X');
+            field.print();
+
+            user = winner('X');
+
+            if (user) {
+                System.out.println("Вы выиграли ");
+                break;
+            }
+
+            System.out.println("Ход компъютера");
+
+            pcstep = pcstep();
+            field.push(pcstep, 'O');
+            field.print();
+            comp = winner('O');
+
+            if (comp) {
+                System.out.println("Выиграл компъютер ");
+                break;
+            }
+
+        } while (user == false & comp == false);
     }
+
+
 
 }
