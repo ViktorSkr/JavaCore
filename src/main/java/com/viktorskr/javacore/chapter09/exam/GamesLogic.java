@@ -1,4 +1,5 @@
 package com.viktorskr.javacore.chapter09.exam;
+import java.io.IOException;
 
 //содержит бизнес-логику игры
 
@@ -53,7 +54,7 @@ class GamesLogic {
         }return 0;
     }
 
-    char userstep(){
+    char userstep() throws IOException {
 
         char step;
 
@@ -66,14 +67,12 @@ class GamesLogic {
     }
 
 
-    void start() {
+    void start() throws IOException {
 
         boolean user;
         boolean comp;
 
         do {
-            boolean pcval;
-
             field.print();
 
             userstep = userstep();

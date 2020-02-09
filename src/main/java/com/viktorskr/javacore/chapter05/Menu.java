@@ -3,8 +3,7 @@ package com.viktorskr.javacore.chapter05;
 // Использовать оператор цикла do-while для выбора пункта меню
 
 class Menu {
-    public static void main(String args[])
-            throws java.io.IOException {
+    public static void main(String args[]) throws java.io.IOException {
         char choice;
         do {
             System.out.println("Справка по оператору:");
