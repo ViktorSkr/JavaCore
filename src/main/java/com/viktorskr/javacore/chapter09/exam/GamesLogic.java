@@ -117,5 +117,5 @@ class GamesLogic {
     String a = "Сделайте свой ход";
     String b = "Вы выиграли";
     String c = "Выиграл компъютер";
-    String e = "Ходов больше нет";
+    String e = "Ничья";
 }

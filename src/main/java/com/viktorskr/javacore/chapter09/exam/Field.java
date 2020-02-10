@@ -24,7 +24,7 @@ class Field {
          System.out.println();
      }
 
-     // Ставим крестик в указанную позицию
+     // Ставим символ в указанную позицию
      public void push(char p, char s) {
          for (int i = 0; i < 5; i++)
              for (int j = 0; j < 5; j++)
