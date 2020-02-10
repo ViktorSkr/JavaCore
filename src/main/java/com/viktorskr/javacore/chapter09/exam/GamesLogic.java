@@ -8,8 +8,8 @@ class GamesLogic {
 
     Field field = new Field();
 
-    char userstep;
-    char pcstep;
+    char ustep;
+    char pstep;
 
     boolean winner(char str){
 
@@ -92,8 +92,8 @@ class GamesLogic {
         field.print();
 
         do {
-            userstep = userstep();
-            field.push(userstep, 'X');
+            ustep = userstep();
+            field.push(ustep, 'X');
             field.print();
             user = winner('X');
 
@@ -102,8 +102,8 @@ class GamesLogic {
                 break;
             }
 
-            pcstep = pcstep();
-            field.push(pcstep, 'O');
+            pstep = pcstep();
+            field.push(pstep, 'O');
             field.print();
             computer = winner('O');
 
@@ -112,7 +112,7 @@ class GamesLogic {
                 break;
             }
 
-        } while (pcstep != 0);
+        } while (pstep != 0);
     }
 
 
