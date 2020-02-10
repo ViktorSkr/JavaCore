@@ -7,6 +7,7 @@ import java.util.Random;
 class GamesLogic {
 
     Field field = new Field();
+    Random random = new Random();
 
     char ustep;
     char pstep;
@@ -45,25 +46,24 @@ class GamesLogic {
         char pc;
         boolean ver;
 
-        Random random = new Random();
-
         for (int i=0; i<20; i++) {
-
             pc = (char) (49 + random.nextInt(9));
             ver = verificationsteppc(pc);
 
             if (ver)
                 return pc;
-
-            } System.out.println("Ходов больше нет");
+            } System.out.println(e);
         return 0;
     }
 
-    boolean verificationsteppc(char ver){
-        char pc = ver;
+    boolean verificationsteppc(char pc){
+        char ver;
+
+        ver = pc;
+
         for (char x[] : field.a) {
             for (char y : x) {
-                if (y == pc) {
+                if (y == ver) {
                     return true;
                 }
             }
@@ -74,7 +74,7 @@ class GamesLogic {
 
         char step;
 
-        System.out.println("Сделайте свой ход");
+        System.out.println(a);
 
         do {
             step = (char) System.in.read();
@@ -98,7 +98,7 @@ class GamesLogic {
             user = winner('X');
 
             if (user) {
-                System.out.println("Вы выиграли ");
+                System.out.println(b);
                 break;
             }
 
@@ -108,13 +108,15 @@ class GamesLogic {
             computer = winner('O');
 
             if (computer) {
-                System.out.println("Выиграл компъютер ");
+                System.out.println(c);
                 break;
             }
 
         } while (pstep != 0);
     }
 
-
-
+    String a = "Сделайте свой ход";
+    String b = "Вы выиграли";
+    String c = "Выиграл компъютер";
+    String e = "Ходов больше нет";
 }
