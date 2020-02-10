@@ -58,7 +58,6 @@ class GamesLogic {
 
     boolean verificationsteppc(char pc){
         char ver;
-
         ver = pc;
 
         for (char x[] : field.a) {
