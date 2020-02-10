@@ -43,7 +43,7 @@ class GamesLogic {
     char pcstep(){
 
         char pc;
-        boolean ver = true;
+        boolean ver;
 
         Random random = new Random();
 
@@ -54,8 +54,6 @@ class GamesLogic {
 
             if (ver)
                 return pc;
-            else ;
-                break;
 
             } System.out.println("Ходов больше нет");
         return 0;
