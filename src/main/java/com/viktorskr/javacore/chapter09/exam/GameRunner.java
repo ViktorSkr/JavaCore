@@ -3,8 +3,6 @@ import java.io.IOException;
 
 //главный класс приложения, содержащий метод main
 
-
-
 class GameRunner {
     public static void main(String args[]) throws IOException {
 

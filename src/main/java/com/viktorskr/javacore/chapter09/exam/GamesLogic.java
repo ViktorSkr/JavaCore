@@ -1,5 +1,6 @@
 package com.viktorskr.javacore.chapter09.exam;
 import java.io.IOException;
+import java.util.Random;
 
 //содержит бизнес-логику игры
 
@@ -43,7 +44,8 @@ class GamesLogic {
 
         char pc;
 
-        pc = (char) (1 + Math.random() * 10);
+        Random random = new Random();
+        pc = (char) (49 + random.nextInt(9));
 
         for (char x[] : field.a) {
             for (char y : x) {
@@ -58,10 +60,11 @@ class GamesLogic {
 
         char step;
 
+        System.out.println("Сделайте свой ход");
+
         do {
-            System.out.println("Сделайте свой ход");
             step = (char) System.in.read();
-        } while (step < '1' || step > '9');
+        } while (step < '1' | step > '9');
 
         return step;
     }
@@ -70,15 +73,14 @@ class GamesLogic {
     void start() throws IOException {
 
         boolean user;
-        boolean comp;
+        boolean computer;
+
+        field.print();
 
         do {
-            field.print();
-
             userstep = userstep();
             field.push(userstep, 'X');
             field.print();
-
             user = winner('X');
 
             if (user) {
@@ -86,19 +88,17 @@ class GamesLogic {
                 break;
             }
 
-            System.out.println("Ход компъютера");
-
             pcstep = pcstep();
             field.push(pcstep, 'O');
             field.print();
-            comp = winner('O');
+            computer = winner('O');
 
-            if (comp) {
+            if (computer) {
                 System.out.println("Выиграл компъютер ");
                 break;
             }
 
-        } while (user == false & comp == false);
+        } while (user == false & computer == false);
     }
 
 
