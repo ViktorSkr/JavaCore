@@ -3,9 +3,9 @@ package com.viktorskr.javacore.chapter09.exam;
 
 //сущность, описывающая игровое поле
 
- class Field {
+class Field {
 
-     char a[][] = {
+      char a[][] = {
              {'1', '|', '2', '|', '3'},
              {'-', '-', '-', '-', '-'},
              {'4', '|', '5', '|', '6'},

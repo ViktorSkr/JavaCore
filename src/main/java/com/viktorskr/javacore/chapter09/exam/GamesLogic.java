@@ -43,17 +43,33 @@ class GamesLogic {
     char pcstep(){
 
         char pc;
+        boolean ver = true;
 
         Random random = new Random();
-        pc = (char) (49 + random.nextInt(9));
 
+        for (int i=0; i<20; i++) {
+
+            pc = (char) (49 + random.nextInt(9));
+            ver = verificationsteppc(pc);
+
+            if (ver)
+                return pc;
+            else ;
+                break;
+
+            } System.out.println("Ходов больше нет");
+        return 0;
+    }
+
+    boolean verificationsteppc(char ver){
+        char pc = ver;
         for (char x[] : field.a) {
             for (char y : x) {
                 if (y == pc) {
-                    return pc;
+                    return true;
                 }
             }
-        }return 0;
+        }return false;
     }
 
     char userstep() throws IOException {
@@ -98,7 +114,7 @@ class GamesLogic {
                 break;
             }
 
-        } while (user == false & computer == false);
+        } while (pcstep != 0);
     }
 
 
