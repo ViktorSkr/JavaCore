@@ -2,7 +2,7 @@ package com.viktorskr.javacore.chapter18;
 
 import java.util.TreeSet;
 
-public class TreeSetDemo {
+class TreeSetDemo {
     public static void main(String args[]){
         //Создать древовидное множество типа TreeSet
         TreeSet<String> ts = new TreeSet<>();

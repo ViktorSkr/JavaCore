@@ -3,7 +3,7 @@ package com.viktorskr.javacore.chapter18;
 import java.util.HashSet;
 import java.util.LinkedHashSet;
 
-public class HashSetDemo {
+class HashSetDemo {
     public static void main(String args[]){
         HashSet<String> hs = new HashSet<String>();
         hs.add("Бета");
