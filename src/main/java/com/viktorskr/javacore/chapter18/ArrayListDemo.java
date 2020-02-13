@@ -2,7 +2,7 @@ package com.viktorskr.javacore.chapter18;
 
 import java.util.ArrayList;
 
-public class ArrayListDemo {
+class ArrayListDemo {
     public static void main(String args[]){
 
         //Создать Списочьный масив
