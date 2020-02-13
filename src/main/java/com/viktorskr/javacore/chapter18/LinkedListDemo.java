@@ -2,7 +2,7 @@ package com.viktorskr.javacore.chapter18;
 
 import java.util.LinkedList;
 
-public class LinkedListDemo {
+class LinkedListDemo {
     public static void main(String args[]){
         //Создать связный список
         LinkedList<String> ll = new LinkedList<String>();
