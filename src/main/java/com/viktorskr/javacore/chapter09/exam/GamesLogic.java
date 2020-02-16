@@ -14,66 +14,55 @@ class GamesLogic {
 
     boolean winner(char str){
 
-        if (str == field.a[0][0] & str == field.a[0][2] & str == field.a[0][4])
+        if (str == field.playingf[0][0] & str == field.playingf[0][1] & str == field.playingf[0][2])
             return true;
-        else;
-        if (str == field.a[2][0] & str == field.a[2][2] & str == field.a[2][4])
+        if (str == field.playingf[1][0] & str == field.playingf[1][1] & str == field.playingf[1][2])
             return true;
-        else;
-        if (str == field.a[4][0] & str == field.a[4][2] & str == field.a[4][4])
+        if (str == field.playingf[2][0] & str == field.playingf[2][1] & str == field.playingf[2][2])
             return true;
-        else;
-        if (str == field.a[0][0] & str == field.a[2][0] & str == field.a[4][0])
+        if (str == field.playingf[0][0] & str == field.playingf[1][0] & str == field.playingf[2][0])
             return true;
-        else;
-        if (str == field.a[0][2] & str == field.a[2][2] & str == field.a[4][2])
+        if (str == field.playingf[0][1] & str == field.playingf[1][1] & str == field.playingf[2][1])
             return true;
-        else;
-        if (str == field.a[0][4] & str == field.a[2][4] & str == field.a[4][4])
+        if (str == field.playingf[0][2] & str == field.playingf[1][2] & str == field.playingf[2][2])
             return true;
-        else;
-        if (str == field.a[0][0] & str == field.a[2][2] & str == field.a[4][4])
+        if (str == field.playingf[0][0] & str == field.playingf[1][1] & str == field.playingf[2][2])
             return true;
-        else;
-        if (str == field.a[4][0] & str == field.a[2][2] & str == field.a[0][4])
+        if (str == field.playingf[2][0] & str == field.playingf[1][1] & str == field.playingf[0][2])
             return true;
-        else;
         return false;
     }
 
-    char pcstep(){
+    char pcstep() {
 
         char pc;
-        boolean ver;
+        int test=0;
 
-        for (int i=0; i<20; i++) {
+        do {
+
             pc = (char) (49 + random.nextInt(9));
-            ver = verificationsteppc(pc);
 
-            if (ver)
-                return pc;
-            } System.out.println(e);
-        return 0;
-    }
+            for (char x[] : field.playingf) {
+                for (char y : x) {
+                    if (y >= '1' & y <= '9')
+                        ++test;
 
-    boolean verificationsteppc(char pc){
-        char ver;
-        ver = pc;
-
-        for (char x[] : field.a) {
-            for (char y : x) {
-                if (y == ver) {
-                    return true;
+                    if (y == pc)
+                        return pc;
                 }
             }
-        }return false;
-    }
+        } while (test != 0) ;
+
+        System.out.println(draw);
+        return 0;
+        }
+
 
     char userstep() throws IOException {
 
         char step;
 
-        System.out.println(a);
+        System.out.println(stuser);
 
         do {
             step = (char) System.in.read();
@@ -97,7 +86,7 @@ class GamesLogic {
             user = winner('X');
 
             if (user) {
-                System.out.println(b);
+                System.out.println(winuser);
                 break;
             }
 
@@ -107,15 +96,16 @@ class GamesLogic {
             computer = winner('O');
 
             if (computer) {
-                System.out.println(c);
+                System.out.println(winpc);
                 break;
             }
 
         } while (pstep != 0);
     }
 
-    String a = "Сделайте свой ход";
-    String b = "Вы выиграли";
-    String c = "Выиграл компъютер";
-    String e = "Ничья";
+    String stuser = "Сделайте свой ход";
+    String winuser = "Вы выиграли";
+    String winpc = "Выиграл компъютер";
+    String draw = "Ничья";
 }
+
