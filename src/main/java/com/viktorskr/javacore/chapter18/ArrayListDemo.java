@@ -20,10 +20,12 @@ class ArrayListDemo {
         al.add("G");
         al.add(1, "A2");
         al.add(3, "B2");
+
         System.out.println("Размер масива после ввода елементов " + al + " размер " + al.size());
 
         al.remove("F");
         al.remove(2);
+
 
         System.out.println("Вывод месива после удаления элементов " + al + " размер " + al.size());
 

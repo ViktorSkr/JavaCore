@@ -29,7 +29,7 @@ class IteratorDemo {
         }
         System.out.println();
 
-        //Видоизменить птеребираемые объекты
+        //Видоизменить перебираемые объекты
         ListIterator<String> litr = al.listIterator();
         while (litr.hasNext()){
             String element = litr.next();

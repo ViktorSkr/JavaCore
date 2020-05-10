@@ -1,6 +1,9 @@
 package com.viktorskr.javacore.chapter18;
 
+import java.util.ArrayDeque;
+import java.util.Collection;
 import java.util.LinkedList;
+import java.util.PriorityQueue;
 
 class LinkedListDemo {
     public static void main(String args[]){
