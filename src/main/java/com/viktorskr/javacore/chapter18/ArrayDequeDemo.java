@@ -16,10 +16,6 @@ class ArrayDequeDemo {
 
         System.out.println("Размер стека " + adq.size());
         System.out.println("Содержимое масива " + adq);
-        System.out.println("adq.peek " + adq.peek());
-        System.out.println("adq.pop() " + adq.pop());
-        System.out.println("adq.pop() " + adq.pop());
-        System.out.println("adq.pop() " + adq.pop());
 
         System.out.println("Извлкчение из стека");
         while (adq.peek() != null)
@@ -28,7 +24,6 @@ class ArrayDequeDemo {
 
         System.out.println("Размер стека " + adq.size());
         System.out.println("Содержимое масива " + adq);
-        System.out.println("adq.peek " + adq.peek());
 
     }
 }

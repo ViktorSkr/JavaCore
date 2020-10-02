@@ -24,6 +24,18 @@ class SpliteratorDemo {
         while (spltitr.tryAdvance((n) -> System.out.println(n)));
         System.out.println();
 
-        //
+        //создать новый списочный массив, содержащий квадратные
+        //корни числовых значений из списочного масива vals
+        spltitr = vals.spliterator();
+        ArrayList<Double> sqrs = new ArrayList<>();
+        while (spltitr.tryAdvance((n) -> sqrs.add(Math.sqrt(n))));
+
+
+        //вызвать метод forEachRemaining() для вывода содержимого
+        //списочного массива sqrs
+        System.out.println("Содержимое списочного массива sqrs: \n");
+        spltitr = sqrs.spliterator();
+        spltitr.forEachRemaining((n) -> System.out.println(n));
+        System.out.println(vals);
     }
 }

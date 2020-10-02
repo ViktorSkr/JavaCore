@@ -35,9 +35,11 @@ class IteratorDemo {
             String element = litr.next();
             litr.set(element + "+");
         }
+
         System.out.print("Измененное содержимое списочного масива al: ");
         itr = al.iterator();
-        while (itr.hasNext()){
+        while (itr.hasNext())
+        {
             String element = itr.next();
             System.out.print(element + " ");
         }
@@ -46,7 +48,8 @@ class IteratorDemo {
         //Отобразить список в обратном порядке
 
         System.out.print("Измененный список в обратном порядке; ");
-        while (litr.hasPrevious()){
+        while (litr.hasPrevious())
+        {
             String element = litr.previous();
             System.out.print(element + " ");
         }

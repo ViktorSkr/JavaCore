@@ -37,8 +37,9 @@ class Address {
 
         // вывести список адресов
 
-        for (Address element:ml)
+        for (Address element:ml) {
             System.out.println(element + "\n");
+        }
 
         System.out.println();
     }
