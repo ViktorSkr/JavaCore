@@ -22,7 +22,7 @@ class AccessTest {
     }
 
 
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         Test ob = new Test();
 
         //Эти операторы правильны, поэтому члены a и b
