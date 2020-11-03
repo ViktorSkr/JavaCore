@@ -18,5 +18,6 @@ class StringDemo2 {
             System.out.println("strOb1 = StrOb3");
         else
             System.out.println("strOb1 != StrOb3");
+        int a=1;
     }
 }
