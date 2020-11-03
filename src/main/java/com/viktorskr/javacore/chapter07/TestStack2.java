@@ -8,7 +8,7 @@ class Stack1 {
 
     //выделить память под стек и инициализировать его
     Stack1(int size) {
-        stck = new  int[size];
+        stck = new int[size];
         tos = -1;
     }
 
@@ -28,6 +28,10 @@ class Stack1 {
         }
         else
             return stck[tos--];
+    }
+
+    static {
+        System.out.println("Проверка статического блока");
     }
 
 }

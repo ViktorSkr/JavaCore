@@ -17,5 +17,6 @@ class UseStatic {
 
     public static void main(String[] args){
         meth(42);
+
     }
 }
