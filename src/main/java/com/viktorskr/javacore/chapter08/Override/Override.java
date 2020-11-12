@@ -14,6 +14,7 @@ class A {
         System.out.println("i & j: " + i + " " + j);
     }
 }
+
 class B extends A {
     int k;
 
@@ -22,6 +23,7 @@ class B extends A {
         k = c;
     }
     void show() {
+        super.show();
         System.out.println("k: " + k);
     }
 }
