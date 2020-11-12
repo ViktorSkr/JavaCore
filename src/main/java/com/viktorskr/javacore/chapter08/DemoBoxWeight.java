@@ -67,6 +67,14 @@ class BoxWeight extends Box {
     }
 }
 
+// Клас добавляющий стоимость доставки
+class Shipment extends BoxWeight{
+    double cost;
+
+
+}
+
+
 //Етот класс расширяет класс Box, включая в него свойство цвета
 class ColorBox extends Box{
     int color;

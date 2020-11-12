@@ -1,4 +1,4 @@
-package com.viktorskr.javacore.chapter08;
+package com.viktorskr.javacore.chapter08.Dispatch;
 
 // Динамтческая диспетчеризация методов
 
