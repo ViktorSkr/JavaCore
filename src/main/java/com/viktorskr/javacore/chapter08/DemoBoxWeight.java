@@ -66,7 +66,7 @@ class ColorBox extends Box{
 }
 
 class DemoBoxWeight {
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         BoxWeight mybox1 = new BoxWeight(10, 20, 15, 34.3);
         BoxWeight mybox2 = new BoxWeight(2,3,4,0.076);
         double vol;
@@ -84,7 +84,12 @@ class DemoBoxWeight {
 }
 
 class  RefDemo {
-    public static void main(String args[]) {
+    public static void main(String[] args) {
+        BoxWeight weightbox = new BoxWeight(3, 5, 7, 8.37);
+        Box plainbox = new Box();
+        double vol;
 
+        vol = weightbox.volume();
+        System.out.println("");
     }
 }
